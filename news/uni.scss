@@ -1,0 +1,57 @@
+/* 1. 默认(白天)模式的颜色变量 */
+:root {
+	--bg-color: #f5f7fa; /* 页面背景色 */
+	--card-bg-color: #ffffff; /* 卡片背景色 */
+	--text-color-primary: #2c3e50; /* 主要文字(标题) */
+	--text-color-secondary: #7f8c8d; /* 次要文字(摘要/来源) */
+	--text-color-placeholder: #bdc3c7; /* 占位符文字 */
+	--brand-color: #3489F6; /* 品牌主色 */
+	--border-color: #ecf0f1; /* 边框/分隔线 */
+	--shadow-color: rgba(0, 0, 0, 0.06); /* 阴影 */
+}
+
+/* 2. 黑夜模式的颜色变量 */
+.theme-dark {
+	--bg-color: #1a1a1a;
+	--card-bg-color: #2c2c2c;
+	--text-color-primary: #e0e0e0;
+	--text-color-secondary: #95a5a6;
+	--text-color-placeholder: #5a5a5a;
+	--brand-color: #3489F6;
+	--border-color: #3a3a3a;
+	--shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* 3. 字体大小变量 (挂载到 :root 下方便JS修改) */
+:root {
+	--font-size-base: 30rpx; /* 基础字号 (对应 medium) */
+	--font-size-title: 34rpx; /* 标题字号 */
+	--line-height-base: 1.7; /* 基础行高 */
+}
+
+/* 4. 字号设置类 */
+.font-size-small {
+	--font-size-base: 28rpx;
+	--font-size-title: 32rpx;
+	--line-height-base: 1.6;
+}
+.font-size-medium {
+	--font-size-base: 30rpx;
+	--font-size-title: 34rpx;
+	--line-height-base: 1.7;
+}
+.font-size-large { /* 老人模式 */
+	--font-size-base: 38rpx;
+	--font-size-title: 44rpx;
+	--line-height-base: 1.8;
+}
+
+/* 5. 确保页面高度充满并响应全局主题 */
+/* 关键：将背景色应用到 page 和 html 标签，使其能响应 JS 设置的全局类 */
+page, uni-page-body, body, html {
+	height: 100%;
+	background-color: var(--bg-color); 
+	color: var(--text-color-secondary);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+}

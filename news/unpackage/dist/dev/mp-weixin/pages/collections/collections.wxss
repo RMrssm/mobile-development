@@ -1,0 +1,53 @@
+
+/* 4. 使用 CSS 变量 */
+.container {
+	background-color: var(--bg-color);
+	min-height: 100vh;
+	padding: 20rpx 30rpx;
+}
+
+/* 列表样式 */
+.news-card {
+	background-color: var(--card-bg-color);
+	padding: 30rpx;
+	margin-bottom: 25rpx;
+	border-radius: 16rpx;
+	box-shadow: 0 4rpx 15rpx var(--shadow-color);
+}
+.news-title {
+	font-size: var(--font-size-title);
+	color: var(--text-color-primary);
+	line-height: 1.5;
+	margin-bottom: 15rpx;
+	font-weight: 600;
+}
+.news-footer {
+	display: flex;
+	justify-content: space-between;
+	font-size: 26rpx;
+	color: var(--text-color-placeholder);
+	padding-top: 15rpx;
+	border-top: 1rpx solid var(--border-color);
+}
+
+/* 空状态 */
+.empty-state {
+	text-align: center;
+	padding-top: 200rpx;
+	color: var(--text-color-secondary);
+	font-size: var(--font-size-base);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.empty-text {
+	margin-bottom: 40rpx;
+}
+.go-home-btn {
+	background-color: var(--brand-color);
+	color: #fff;
+	font-size: 30rpx;
+	padding: 0 80rpx;
+	border-radius: 50rpx;
+	line-height: 2.8;
+}

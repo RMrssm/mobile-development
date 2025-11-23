@@ -1,0 +1,98 @@
+
+/* 引入阿里巴巴矢量图标库作为图标 */
+@font-face {
+  font-family: 'iconfont';
+  src: url('https://at.alicdn.com/t/c/font_3750800_l0e9141r28m.ttf') format('truetype');
+}
+
+/* 7. 使用 CSS 变量 */
+.container {
+	background-color: var(--bg-color);
+	min-height: 100vh;
+	padding-bottom: 50rpx;
+}
+/* 渐变高级感卡片 */
+.profile-card-gradient {
+	background: linear-gradient(135deg, #4a90e2 0%, #3489F6 100%);
+	padding: 80rpx 50rpx;
+	margin: 20rpx 30rpx 30rpx;
+	border-radius: 20rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start; /* 左对齐 */
+	box-shadow: 0 10rpx 20rpx rgba(52, 137, 246, 0.3);
+}
+.logo-name {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	color: #fff;
+	font-size: 60rpx;
+	font-weight: 800;
+	display: flex;
+	align-items: baseline;
+	margin-bottom: 20rpx;
+}
+.first-name {
+	font-size: 80rpx;
+	margin-right: 10rpx;
+}
+.tag {
+	font-size: 24rpx;
+	font-weight: 500;
+	padding: 4rpx 12rpx;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #fff;
+	border-radius: 20rpx;
+	margin-left: 15rpx;
+	align-self: center;
+}
+.motto {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 28rpx;
+	margin-top: 10rpx;
+	font-weight: 300;
+}
+.section-title {
+	font-size: 30rpx;
+	color: var(--text-color-secondary);
+	padding: 20rpx 40rpx 10rpx;
+	font-weight: 500;
+}
+.menu-list {
+	background-color: var(--card-bg-color);
+	margin: 0 30rpx;
+	border-radius: 16rpx;
+	overflow: hidden;
+	box-shadow: 0 4rpx 15rpx var(--shadow-color);
+}
+.menu-item {
+	display: flex;
+	align-items: center;
+	padding: 30rpx 40rpx;
+	border-bottom: 1rpx solid var(--border-color);
+	position: relative;
+	transition: background-color 0.2s;
+}
+.menu-item:active {
+	background-color: rgba(0,0,0,0.05);
+}
+.menu-item:last-child {
+	border-bottom: none;
+}
+.icon {
+	font-family: iconfont;
+	font-size: 40rpx;
+	color: var(--brand-color);
+	width: 60rpx;
+	text-align: center;
+}
+.text {
+	flex: 1;
+	font-size: var(--font-size-base); /* 使用变量 */
+	color: var(--text-color-primary);
+	font-weight: 500;
+	margin-left: 20rpx;
+}
+.arrow {
+	font-size: 30rpx;
+	color: var(--text-color-placeholder);
+}

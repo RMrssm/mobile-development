@@ -1,0 +1,78 @@
+
+/* 使用 CSS 变量 */
+.container {
+	background-color: var(--bg-color);
+	min-height: 100vh;
+	padding: 20rpx 0;
+}
+.setting-group {
+	background-color: var(--card-bg-color);
+	margin: 20rpx 30rpx;
+	border-radius: 16rpx;
+	box-shadow: 0 4rpx 15rpx var(--shadow-color);
+	overflow: hidden;
+}
+.setting-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30rpx;
+	border-bottom: 1rpx solid var(--border-color);
+}
+.setting-item:last-child {
+	border-bottom: none;
+}
+.left {
+	display: flex;
+	flex-direction: column;
+}
+.title {
+	font-size: var(--font-size-base);
+	color: var(--text-color-primary);
+	font-weight: 500;
+}
+.desc {
+	font-size: 24rpx;
+	color: var(--text-color-secondary);
+	margin-top: 5rpx;
+}
+.right {
+	display: flex;
+	align-items: center;
+}
+.arrow {
+	font-size: 30rpx;
+	color: var(--text-color-placeholder);
+	margin-left: 10rpx;
+}
+.cache-size {
+	font-size: 28rpx;
+	color: var(--text-color-secondary);
+}
+
+/* 字体设置 */
+.font-size-selector {
+	display: flex;
+	align-items: center;
+	padding: 30rpx;
+}
+.label {
+	font-size: 28rpx;
+	color: var(--text-color-secondary);
+	transition: all 0.2s;
+}
+.label.active {
+	font-size: 30rpx;
+	color: var(--brand-color);
+	font-weight: bold;
+}
+.slider-wrapper {
+	flex: 1;
+	margin: 0 30rpx;
+}
+.brand-footer {
+	text-align: center;
+	padding: 80rpx 0 40rpx;
+	color: var(--text-color-placeholder);
+	font-size: 24rpx;
+}

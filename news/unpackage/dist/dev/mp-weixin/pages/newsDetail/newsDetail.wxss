@@ -1,0 +1,85 @@
+
+/* 使用 CSS 变量 */
+.container {
+	background-color: var(--card-bg-color); 
+	min-height: 100vh;
+}
+.detail-wrapper {
+	padding: 40rpx 30rpx;
+	/* 按钮回归内容流，减少底部填充 */
+	padding-bottom: 40rpx;
+}
+.detail-title {
+	font-size: 52rpx; 
+	font-weight: 700;
+	color: var(--text-color-primary);
+	line-height: 1.4;
+	margin-bottom: 30rpx;
+}
+.detail-meta {
+	display: flex;
+	justify-content: space-between;
+	padding: 20rpx 0;
+	border-bottom: 1rpx solid var(--border-color);
+	margin-bottom: 40rpx;
+	font-size: 26rpx;
+	color: var(--text-color-secondary);
+}
+.highlight {
+	color: var(--brand-color);
+	font-weight: 500;
+	margin-left: 5rpx;
+}
+.detail-content {
+	font-size: var(--font-size-base); 
+	color: var(--text-color-primary);
+	line-height: var(--line-height-base); 
+	white-space: pre-wrap;
+	text-align: justify;
+}
+
+/* 按钮居中容器 */
+.collection-area {
+	padding: 40rpx 0;
+	text-align: center;
+}
+
+/* === 收藏按钮样式：普通定位，统一黑字区分背景/边框 === */
+.collect-btn {
+	/* 默认状态 (+ 加入收藏): 品牌蓝边框，黑字白底 (确保在白背景上突出) */
+	background-color: transparent; 
+	color: var(--text-color-primary); /* 统一黑色文字 */
+	border: 2rpx solid var(--brand-color); /* 品牌蓝边框，在白底上突出 */
+	
+	font-size: var(--font-size-base);
+	padding: 0 50rpx;
+	border-radius: 50rpx;
+	line-height: 2.8;
+	transition: all 0.3s;
+	min-width: 300rpx; 
+	text-align: center;
+	font-weight: bold;
+}
+.collect-btn:active {
+	opacity: 0.8;
+}
+.collect-btn.is-collected {
+	/* 已收藏 (✓ 已收藏): 浅灰底，黑字，浅色边框 (柔和显示已完成操作) */
+	background-color: var(--bg-color); /* 使用页面背景色作为浅色填充 */
+	color: var(--text-color-primary); /* 统一黑色文字 */
+	border: 2rpx solid var(--border-color); /* 浅色边框 */
+	font-weight: normal;
+}
+/* ==================================== */
+.brand-footer {
+	text-align: center;
+	padding: 40rpx 0;
+	color: var(--text-color-placeholder);
+	font-size: 24rpx;
+}
+.loading-state {
+	padding: 100rpx 0;
+	text-align: center;
+	color: var(--text-color-secondary);
+	font-size: 28rpx;
+}
